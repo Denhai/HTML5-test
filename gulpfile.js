@@ -1,6 +1,7 @@
 var gulp = require('gulp')
 var sass = require('gulp-sass')
 var bs = require('browser-sync')
+var uncss = require('gulp-uncss');
 
 var paths = {
   html: 'src/**/*.html',
@@ -31,6 +32,14 @@ gulp.task('html', function() {
   gulp.src(paths.html)
     .pipe(gulp.dest('dist'))
     .pipe(bs.reload({ stream: true }))
+})
+
+gulp.task('uncss', function() {
+  gulp.src('dist/**/*.css')
+  .pipe(uncss({
+    html: ['dist/**/*.html']
+  }))
+  .pipe(gulp.dest('dist'))
 })
 
 gulp.task('default', ['browser-sync'], function () {
