@@ -2,7 +2,7 @@
 
 <head>
 	<title>HTML5</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
@@ -11,74 +11,64 @@
 		<div class="divider"></div>
 		<ul class='breadcrumb'>
 			<li>
-				<a href='#'>
-					<span class='textnav'>Paragraph</span>
-				</a>
+				<a href='#'>Paragraph</a>
 			</li>
 			<li>
-				<a href='#'>
-					<span class='textnav'>Table</span>
-				</a>
+				<a href='#'>Table</a>
 			</li>
 			<li>
-				<a href='#'>
-					<span class='textnav'>Image</span>
-				</a>
+				<a href='#'>Image</a>
 			</li>
 		</ul>
 		<p>
 			HTML 4.0 is becoming the standard. As of the writing of this tutorial, Microsoft Explorer version 5.0 is out with full HTML
 			4.0 support.
-			<a href='#' style='color: green'>Netscape Navigator 5.0</a> is not far behind, and soon the commands below will start
-			to become mainstream.
+			<a href='#'>Netscape Navigator 5.0</a> is not far behind, and soon the commands below will start to become mainstream.
 		</p>
 		<p>
 			Here's a quick look at how HTML 4.01 affects tables. You are already familiar with some of the tags and attributes. For example,
-			<a href='#'>
-				<font color='blue'>BORDERCOLOR has been</font>
-			</a>
-			in use for a while as a proprietary Internet Explorer tag. It has just now been written into the HTML 4.01 code.
+			<a href='#'>BORDERCOLOR has been</a> in use for a while as a proprietary Internet Explorer tag. It has just now been written
+			into the HTML 4.01 code.
 		</p>
 		<p>
 			I have offered as many examples as possible. Many will simply not work because you don't yet have the browser version that
 			supports it. Don't worry, neither did I when
-			<a href='#' id='blue'>I wrote this tutorial.</a> Hopefully you'll be able to visit this tutorial in the future to test
+			<a href='#' id='blue'>I wrote this tutorial</a>. Hopefully you'll be able to visit this tutorial in the future to test
 			what your new browser will and will not do. I am only going to hit the tags and attributes new through HTML 4.01 in this
 			tutorial. If you'd like to get into the basics of table creation, start with my table tutorials.
 		</p>
-		<p>
+		<div class="col-md-6">
 			<table class="table">
-        <thead>
+				<thead>
 					<tr>
-						<th>
-							<span style='font-weight: bold !important'>Heading 1</span>
-						</th>
+						<th>Heading 1</th>
 						<th>Heading 2</th>
-						<th align='right'>Heading 3</th>
+						<th class='right'>Heading 3</th>
 					</tr>
-        </thead>
+				</thead>
 				<tbody>
 					<tr>
 						<td>Cell Data</td>
 						<td>Cell Data</td>
-						<td align='right'>Cell Data</td>
+						<td class='right'>Cell Data</td>
 					</tr>
 					<tr>
-						<td class='high'>Cell Data</td>
+						<td class='success'>Cell Data</td>
 						<td>Cell Data</td>
-						<td align='right'>Cell Data</td>
+						<td class='right'>Cell Data</td>
 					</tr>
 					<tr>
 						<td>Cell Data</td>
 						<td>Cell Data</td>
-						<td align='right'>Cell Data</td>
+						<td class='right'>Cell Data</td>
 					</tr>
 				</tbody>
 			</table>
-		</p>
+		</div>
 		<p>
-			<img border='0' height='281' id='image' src='http://stylonica.com/wp-content/uploads/2014/03/cats-16140154-1920-1080.jpg'
-				width='500'>
+      <div class="col-md-6">
+		    <img class="center-block img-responsive" src='http://placehold.it/500x281'>
+      </div>
 		</p>
 	</div>
 </body>
