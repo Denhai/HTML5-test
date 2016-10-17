@@ -12,7 +12,7 @@ var paths = {
 gulp.task('browser-sync', ['html', 'styles'], function () {
   bs({
     server: {
-      baseDir: "./dist"
+      baseDir: './build'
     }
   })
 })
@@ -24,22 +24,22 @@ gulp.task('bs-reload', function () {
 gulp.task('styles', function () {
   gulp.src(paths.styles)
     .pipe(sass())
-    .pipe(gulp.dest('dist/styles/'))
+    .pipe(gulp.dest('build/styles/'))
     .pipe(bs.reload({ stream: true }))
 })
 
 gulp.task('html', function() {
   gulp.src(paths.html)
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('build'))
     .pipe(bs.reload({ stream: true }))
 })
 
 gulp.task('uncss', function() {
-  gulp.src('dist/**/*.css')
+  gulp.src('build/**/*.css')
   .pipe(uncss({
-    html: ['dist/**/*.html']
+    html: ['build/**/*.html']
   }))
-  .pipe(gulp.dest('dist'))
+  .pipe(gulp.dest('build'))
 })
 
 gulp.task('default', ['browser-sync'], function () {
