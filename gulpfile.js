@@ -30,6 +30,7 @@ gulp.task('styles', function () {
 gulp.task('html', function() {
   gulp.src(paths.html)
     .pipe(gulp.dest('dist'))
+    .pipe(bs.reload({ stream: true }))
 })
 
 gulp.task('default', ['browser-sync'], function () {
